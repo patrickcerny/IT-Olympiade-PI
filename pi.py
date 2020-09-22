@@ -45,3 +45,4 @@ def findNthPrime(nMax: int, width: int = 15):
 
 
 findNthPrime(10)
+print("hallo")
