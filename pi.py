@@ -1,5 +1,5 @@
 import math
-
+import time
 
 with open("./100000.txt") as piFile:
     piContent = piFile.read()[2:]
@@ -33,7 +33,7 @@ def findNthPrime(nMax: int, width: int = 15):
     pos = 0
     while True:
 
-        num = int(piContent[pos:(pos+15)])
+        num = int(piContent[pos:(pos+width)])
         pos += 1
 
         if isPrime(num):
@@ -43,5 +43,11 @@ def findNthPrime(nMax: int, width: int = 15):
             if nthPrime == nMax:
                 break
 
+n = 1
+length = 10
+t0 = time.time()
+findNthPrime(n, length)
+t1 = time.time()
 
-findNthPrime(10)
+print(f"Time to find {n}th element:{t1-t0}s")
+
